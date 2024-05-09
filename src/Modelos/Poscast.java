@@ -6,12 +6,12 @@ public class Poscast extends Audio{
 
     @Override
     public void reproduzindo() {
-        System.out.println("Reproduzindo o Podcast " + getTitulo() + " - " + descricao);
+        System.out.println("\nReproduzindo o Podcast " + getTitulo() + " - " + descricao);
     }
 
     @Override
     public int getClassificacao() {
-        if(this.getCurtidas() > 500) {
+        if(this.getCurtidas() > 800) {
             return 10;
         } else {
             return 8;

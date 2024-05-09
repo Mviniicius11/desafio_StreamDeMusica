@@ -21,7 +21,7 @@ public class Musicas extends Audio{
 
     @Override
     public void reproduzindo() {
-        System.out.println("Reproduzindo %s de %s - Album %s" .formatted(getTitulo(), getArtista(), getAlbum()));
+        System.out.println("\nReproduzindo %s de %s - Album %s" .formatted(getTitulo(), getArtista(), getAlbum()));
     }
 
     public String getAlbum() {

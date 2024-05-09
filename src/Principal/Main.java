@@ -6,47 +6,44 @@ import Modelos.Poscast;
 
 public class Main {
     public static void main(String[] args) {
-
-        Musicas musica1 = new Musicas();
-
-        musica1.setTitulo("Leal");
-        musica1.setDuracao(4.5);
-        musica1.setArtista("Djonga");
-        musica1.setAlbum("Leal");
-
-
-        for (int i = 0; i < 1000; i++) {
-            musica1.reproduzAudio();
-        }
-
-        for (int i = 0; i < 50; i++) {
-            musica1.curtir();
-        }
-
-        musica1.reproduzindo();
-        System.out.println("Total de reproduções: " + musica1.getTotalReproducoes());
-        System.out.println("Total de curtidas: " + musica1.getCurtidas() + "\n");
-
-        Poscast poscast1 = new Poscast();
-
-        poscast1.setTitulo("PodPah");
-        poscast1.setDescricao("Entrevista com o Rapper Djonga");
-
-        for (int i = 0; i < 5000; i++) {
-            poscast1.reproduzAudio();
-        }
-
-        for (int i = 0; i < 1000; i++) {
-            poscast1.curtir();
-        }
-        poscast1.reproduzindo();
-        System.out.println("O total de reproduções: " + poscast1.getTotalReproducoes());
-        System.out.println("O total de curtidas: " + poscast1.getCurtidas());
-        System.out.println("\nAvaliação de %s é %d" .formatted(poscast1.getDescricao(), poscast1.getClassificacao()));
-
         MinhasPreferidas preferidas = new MinhasPreferidas();
+        Musicas leal = new Musicas();
 
-        preferidas.inclui(poscast1);
-        preferidas.inclui(musica1);
+        leal.setTitulo("Leal");
+        leal.setDuracao(3.43);
+        leal.setArtista("Djonga");
+        leal.setAlbum("Ladrão");
+
+
+        for (int i = 0; i < 2654; i++) {
+            leal.reproduzAudio();
+        }
+
+        for (int i = 0; i < 1654; i++) {
+            leal.curtir();
+        }
+
+        leal.reproduzindo();
+        System.out.println("Total de reproduções: " + leal.getTotalReproducoes());
+        System.out.println("Total de curtidas: " + leal.getCurtidas());
+        preferidas.inclui(leal);
+
+        Poscast entrevistaComDjonga = new Poscast();
+
+        entrevistaComDjonga.setTitulo("Mano a Mano");
+        entrevistaComDjonga.setDescricao("Entrevista com o Rapper Djonga");
+
+        for (int i = 0; i < 1652; i++) {
+            entrevistaComDjonga.reproduzAudio();
+        }
+
+        for (int i = 0; i < 656; i++) {
+            entrevistaComDjonga.curtir();
+        }
+        entrevistaComDjonga.reproduzindo();
+        System.out.println("Total de reproduções: " + entrevistaComDjonga.getTotalReproducoes());
+        System.out.println("Total de curtidas: " + entrevistaComDjonga.getCurtidas());
+
+        preferidas.inclui(entrevistaComDjonga);
     }
 }
